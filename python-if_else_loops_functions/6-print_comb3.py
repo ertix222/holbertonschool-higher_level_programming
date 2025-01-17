@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-for c in range(10):
+for c in range(0, 89):
     for d in range(c + 1, 10):
         if c == 8 and d == 9:
             print(f"{c}{d}")
