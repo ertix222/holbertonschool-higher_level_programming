@@ -5,7 +5,8 @@
 Module 3-say_my_name
 
 Functions:
-say_my_name(first_name, last_name=""): Prints "My name is <first name> <last name>".
+say_my_name(first_name, last_name=""):
+Prints "My name is <first name> <last name>".
 """
 
 
@@ -16,7 +17,8 @@ def say_my_name(first_name, last_name=""):
 
     Args:
     first_name (str): The first name to print.
-    last_name (str, optional): The last name to print. Defaults to an empty string.
+    last_name (str, optional):
+    The last name to print. Defaults to an empty string.
 
     Raises:
     TypeError: If `first_name` or `last_name` is not a string.
