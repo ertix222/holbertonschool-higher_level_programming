@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-module 1-square
+module 0-square
 
 Function:
 create a square class
@@ -9,7 +9,6 @@ create a square class
 
 
 class Square:
-    __size = 3
 
     def __init__(self, size):
         self.__size = size
