@@ -22,7 +22,7 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     result = ""
     for char in text:
-        result in text
+        result += char
         if char in ".?:":
             result += "\n\n"
     lines = [line.strip() for line in result.split("\n")]
