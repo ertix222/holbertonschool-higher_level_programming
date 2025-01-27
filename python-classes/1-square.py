@@ -10,16 +10,16 @@ create a square class
 
 class Square:
 
-    def __init__(self, size):
-        self.__size = size
-        pass
     """
     This is my classe
     for a square
     """
 
+    def __init__(self, size):
 
-"""
-this class is for a square
-with his size
-"""
+        """
+        this class is for a square
+        with his size
+        """
+        self.__size = size
+        pass
