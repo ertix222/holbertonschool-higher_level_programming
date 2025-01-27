@@ -15,6 +15,7 @@ class Square:
     """
     pass
 
+
 """
 this class is for a square
 with nothing for now
