@@ -13,9 +13,9 @@ class Rectangle:
     """
     This is a class for a Rectangle
     """
-    
+
     def __init__(self, width=0, height=0):
-        
+
         """
         private instance attribute
         with optional width and height
