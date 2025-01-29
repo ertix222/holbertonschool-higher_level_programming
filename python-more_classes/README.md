@@ -1,0 +1,1 @@
+README for rectangle class
