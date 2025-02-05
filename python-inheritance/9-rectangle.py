@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-module 8-rectangle
+module 9-rectangle
 """
 
 
