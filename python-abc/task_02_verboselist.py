@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-module task__01_duck_typing
+module task__02_verboselist
 """
 from abc import ABC, abstractmethod
 """
