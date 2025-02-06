@@ -49,7 +49,7 @@ class Circle(Shape):
         """
         Compute the perimeter (circumference) of the circle
         """
-        return (self.radius + self.radius) * pi
+        return abs((self.radius + self.radius) * pi)
 
 
 class Rectangle(Shape):
