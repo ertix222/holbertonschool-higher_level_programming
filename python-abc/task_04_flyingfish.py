@@ -7,6 +7,7 @@ from abc import abstractmethod
 
 class Fish:
     """
+    Class for the Fish
     """
     def swim(self):
         print("The fish is swimming")
@@ -17,6 +18,7 @@ class Fish:
 
 class Bird:
     """
+    Class for the bird
     """
     def fly(self):
         print("The bird is flying")
@@ -27,12 +29,13 @@ class Bird:
 
 class FlyingFish(Fish, Bird):
     """
+    Class for the flyingFish
     """
     def swim(self):
         print("The flying fish is swimming!")
-    
+
     def fly(self):
         print("The flying fish is soaring!")
-    
+
     def habitat(self):
         print("The flying fish lives both in water and the sky!")
