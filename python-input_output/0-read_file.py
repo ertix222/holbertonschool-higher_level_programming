@@ -2,6 +2,8 @@
 """
 defines a fonction that read text file
 """
+
+
 def read_file(filename=""):
     """
     open read and print the contant of a file
