@@ -1,8 +1,11 @@
 #!/usr/bin/python3
+"""
+defines a fonction that read text file
+"""
 def read_file(filename=""):
     """
-    defines a fonction that read text file
+    open read and print the contant of a file
     """
-    with open('my_file_0.txt', "r", encoding="utf-8") as f:
+    with open(filename, "r", encoding="utf-8") as f:
         content = f.read()
-    print(content)
+    print(content, end="")
