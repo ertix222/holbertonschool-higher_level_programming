@@ -21,6 +21,12 @@ class Student:
         """
         return the dictionary representation of the student instance
         """
-        if isinstance(attrs, list) and all(isinstance(item, str) for item in attrs):
-            return {key: value for key, value in self.__dict__.items() if key in attrs}
+        if isinstance(attrs, list) and all(
+            isinstance(item, str) for item in attrs
+        ):
+            return {
+                key: value
+                for key, value in self.__dict__.items()
+                if key in attrs
+            }
         return self.__dict__
