@@ -26,8 +26,9 @@ class CustomObject:
             print(f"Error serializing object: {e}")
     
     @classmethod
-    def deserialization(cls, filename):
+    def deserialize(cls, filename):
         """
+        Loads and deserializes an object from a file
         """
         try:
             with open(filename, 'rb') as f:
