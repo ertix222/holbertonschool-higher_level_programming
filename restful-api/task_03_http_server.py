@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """Module T3"""
-import http.server
+from http.server import BaseHTTPRequestHandler, HTTPServer
 import json
 
 
-class SimpleHandler(http.server.BaseHTTPRequestHandler):
+class SimpleHandler(BaseHTTPRequestHandler):
     """
     a simple HTTP request handler
     """
@@ -20,7 +20,7 @@ class SimpleHandler(http.server.BaseHTTPRequestHandler):
 
         elif self.path == '/':
             self.send_response(200)
-            self.send_header("Content-Type", "text/plain")   # name, value
+            self.send_header("Content-Type", "text/plain")
             self.end_headers()
             self.wfile.write(b"Hello, this is a simple API!")
 
@@ -40,14 +40,13 @@ class SimpleHandler(http.server.BaseHTTPRequestHandler):
 
         else:
             self.send_response(404)
-            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Type", "text/plain")
             self.end_headers()
-            self.wfile.write(json.dumps({"error": "Endpoint non found"})
-                             .encode('utf-8'))
+            self.wfile.write(b"Endpoint not found")
 
 
-PORT = 8000
-server = http.server.HTTPServer(("", PORT), SimpleHandler)
+adress = ('', 8000)
+server = HTTPServer(adress, SimpleHandler)
 try:
     server.serve_forever()
 except KeyboardInterrupt:
