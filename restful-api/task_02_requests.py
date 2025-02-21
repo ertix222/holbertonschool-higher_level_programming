@@ -35,6 +35,8 @@ def fetch_and_save_posts():
             for post in posts:
                 writer.writerow({"id": post["id"], "title": post["title"],
                                 "body": post["body"]})
+    else:
+        print("Failed to fetch posts. Status code: {}".format(response.status_code))
 
 
 fetch_and_print_posts()
