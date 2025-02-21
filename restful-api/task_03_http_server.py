@@ -1,14 +1,16 @@
 #!/usr/bin/python3
-
+"""Module T3"""
 import http.server
 import json
+
 
 class SimpleHandler(http.server.BaseHTTPRequestHandler):
     """
     a simple HTTP request handler
     """
+
     def do_GET(self):
-        
+
         if self.path == "/data":
             self.send_response(200)
             object = {"name": "John", "age": 30, "city": "New York"}
@@ -40,7 +42,8 @@ class SimpleHandler(http.server.BaseHTTPRequestHandler):
             self.send_response(404)
             self.send_header("Content-Type", "application/json")
             self.end_headers()
-            self.wfile.write(json.dumps({"error": "Endpoint non found"}).encode('utf-8'))
+            self.wfile.write(json.dumps({"error": "Endpoint non found"})
+                             .encode('utf-8'))
 
 
 PORT = 8000
