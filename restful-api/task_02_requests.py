@@ -13,7 +13,7 @@ def fetch_and_print_posts():
     response = requests.get(url)
 
     if response.status_code == 200:
-        print(f"Status Code: {response.status_code}")
+        print("Status Code: 200")
         posts = response.json()
         for post in posts:
             print(post['title'])
