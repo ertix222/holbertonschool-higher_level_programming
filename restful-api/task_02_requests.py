@@ -28,7 +28,7 @@ def fetch_and_save_posts():
     if response.status_code == 200:
         posts = response.json()
 
-        with open('post.csv', mode='w', newline='', encoding='utf-8') as f:
+        with open('posts.csv', mode='w', newline='', encoding='utf-8') as f:
             writer = csv.DictWriter(f, fieldnames=["id", "title", "body"])
             writer.writeheader()
             for post in posts:
