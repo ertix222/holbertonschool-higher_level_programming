@@ -14,22 +14,19 @@ class SimpleHandler(http.server.BaseHTTPRequestHandler):
             object = {"name": "John", "age": 30, "city": "New York"}
             self.send_header("Content-Type", "application/json")
             self.end_headers()
-            self.wfile.write(json.dumps(object).encode())
-            return
+            self.wfile.write(json.dumps(object).encode('utf-8'))
 
         elif self.path == '/':
             self.send_response(200)
             self.send_header("Content-Type", "text/plain")   # name, value
             self.end_headers()
-            self.wfile.write("Hello, this is a simple API!".encode())
-            return
+            self.wfile.write(b"Hello, this is a simple API!")
 
         elif self.path == '/status':
             self.send_response(200)
             self.send_header("Content-Type", "text/plain")
             self.end_headers()
-            self.wfile.write("OK".encode())
-            return
+            self.wfile.write(b"OK")
 
         elif self.path == '/info':
             self.send_response(200)
@@ -37,16 +34,18 @@ class SimpleHandler(http.server.BaseHTTPRequestHandler):
                       "with http.server"}
             self.send_header("Content-Type", "application/json")
             self.end_headers()
-            self.wfile.write(json.dumps(object).encode())
-            return
+            self.wfile.write(json.dumps(object).encode('utf-8'))
 
         else:
             self.send_response(404)
             self.send_header("Content-Type", "application/json")
             self.end_headers()
-            self.wfile.write(json.dumps({"error": "Endpoint non found"}).encode())
+            self.wfile.write(json.dumps({"error": "Endpoint non found"}).encode('utf-8'))
 
 
 PORT = 8000
 server = http.server.HTTPServer(("", PORT), SimpleHandler)
-server.serve_forever()
+try:
+    server.serve_forever()
+except KeyboardInterrupt:
+    print("\nServer stopped listening")
