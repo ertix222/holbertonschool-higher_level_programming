@@ -2,6 +2,6 @@
 for a in range(0, 100):
     if a // 10 < a % 10:
         if a != 89:
-            print(f"{a:02d}, ", end="")
+            print(f"{a:02d}, ".format(a), end="")
         else:
-            print(f"{a}")
+            print(f"{a:02d}")
