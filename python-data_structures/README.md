@@ -1,0 +1,1 @@
+this is a readme for the directory on the data structure on python
