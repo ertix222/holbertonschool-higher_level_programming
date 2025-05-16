@@ -1,0 +1,1 @@
+This project relates to the management of Python exceptions.
