@@ -6,6 +6,7 @@ create a class Square
 
 
 class Square():
+
     """
     defines a square
     """
@@ -15,6 +16,7 @@ class Square():
         """
         define the size in a privates instance
         """
+
         self.__size = size
         if not isinstance(size, int):
             raise TypeError("size musts be an integer")
