@@ -16,6 +16,7 @@ class Square():
         define the size of the square
         in a privates instance
         """
+
         self.__size = size
         if not isinstance(size, int):
             raise TypeError("size musts be an integer")
@@ -27,4 +28,5 @@ class Square():
         """
         return the area of the square
         """
+
         return (self.__size ** self.__size)
