@@ -12,4 +12,7 @@ class MyList(list):
     that print in asc sort
     """
     def print_sorted(self):
+        """
+        print the lsit in asc order
+        """
         print(sorted(self))
