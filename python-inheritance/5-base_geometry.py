@@ -5,5 +5,6 @@
 
 
 class BaseGeometry():
-    """empty class basgeometry"""
+    """empty class basegeometry
+    """
     pass
