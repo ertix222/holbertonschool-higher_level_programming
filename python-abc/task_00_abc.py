@@ -9,18 +9,20 @@ from abc import ABC, abstractmethod
 
 
 class Animal(ABC):
-    """
+    """class Animal that inherit from ABC
     """
 
     @abstractmethod
     def sound(self):
-        """
+        """abstractmethod sound of the class Animal
         """
         pass
+
 
 class Dog(Animal):
     def sound(self):
         return "Bark"
+
 
 class Cat(Animal):
     def sound(self):
