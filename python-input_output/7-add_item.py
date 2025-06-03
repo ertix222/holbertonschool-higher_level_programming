@@ -14,7 +14,7 @@ filename = "add_item.json"
 
 try:
     list = load_from_json_file(filename)
-except:
+except FileNotFoundError:
     list = []
 
 save_to_json_file(list, filename)
