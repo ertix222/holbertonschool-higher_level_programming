@@ -1,0 +1,1 @@
+The API implements authentication and authorization mechanisms (such as JWT tokens), ensuring secure access to resources and protecting user data
