@@ -28,13 +28,17 @@ def fetch_and_save_posts():
         filter_post.append({
             "id": post["id"],
             "title": post["title"],
-            "body":post["body"]
+            "body": post["body"]
         })
-    with open('posts.csv', 'w', newline='') as csvfile:
-        write = csv.DictWriter(csvfile, fieldnames=["id", "title", "body"])
-        write.writerheads()
-        for post in posts:
-            write.writerow({"id": post["id"],"title": post["title"],"body":post["body"]})
+        with open('posts.csv', 'w', newline='') as csvfile:
+            write = csv.DictWriter(csvfile, fieldnames=["id", "title", "body"])
+            write.writerheads()
+            for post in posts:
+                write.writerow({"id": post["id"],
+                                "title": post["title"], "body": post["body"]})
+    else:
+        print("Failed to fetch posts. Status code: {}".format("response.status_code"))
+
 
 fetch_and_print_posts()
 fetch_and_save_posts()
