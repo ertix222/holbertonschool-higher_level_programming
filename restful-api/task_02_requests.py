@@ -23,7 +23,18 @@ def fetch_and_save_posts():
     response = requests.get(url)
     if response.status_code == 200:
         posts = response.json()
-        print(posts[0])
-
+    filter_post = []
+    for post in posts:
+        filter_post.append({
+            "id": post["id"],
+            "title": post["title"],
+            "body":post["body"]
+        })
+    with open('posts.csv', 'w', newline='') as csvfile:
+        write = csv.DictWriter(csvfile, fieldnames=["id", "title", "body"])
+        write.writerheads()
+        for post in posts:
+            write.writerow({"id": post["id"],"title": post["title"],"body":post["body"]})
 
 fetch_and_print_posts()
+fetch_and_save_posts()
