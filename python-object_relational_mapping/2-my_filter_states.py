@@ -14,9 +14,9 @@ if __name__ == "__main__":
         port=3306
     )
 
-    name = sys.argv[4]
+    name = sys.argv[4].replace("'", "''")
     query = "SELECT * FROM states WHERE name =" \
-        " '{}' ORDER BY id ASC;".format(name.replace("'", "''"))
+        " '{}' ORDER BY id ASC;".format(name)
 
     cur = conn.cursor()
     cur.execute(query)
