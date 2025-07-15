@@ -1,0 +1,1 @@
+Basic JavaScript exercises to get started with JavaScript
