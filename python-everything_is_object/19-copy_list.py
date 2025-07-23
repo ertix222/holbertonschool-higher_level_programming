@@ -1,3 +1,3 @@
+#!/usr/bin/pyhton3
 def copy_list(a_list):
-    list = a_list[:]
-    return list
+    return a_list[:]
