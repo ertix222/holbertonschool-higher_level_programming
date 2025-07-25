@@ -19,3 +19,15 @@ a = [1, 2]
 b = a
 b.append(3)
 print(a)  # Résultat : [1, 2, 3]
+```
+
+## Les entiers sont immuables
+
+Par exemple, avec un entier on retrouve : 
+
+```python
+x=10
+y = x
+y += 5
+print(x) -> 10
+print(y) -> 15
